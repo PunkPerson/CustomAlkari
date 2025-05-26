@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65d3fcb39dd67306e9bb17a603308070, type: 3}
+  m_Name: BratanEnemy
+  m_EditorClassIdentifier: 
+  enemyName: "\u0411\u0440\u0430\u0442\u0430\u043D"
+  probabilityCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.26250076
+      value: 0.3066101
+      inSlope: 0.9401907
+      outSlope: 0.9401907
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0.9401907
+      outSlope: 0.9401907
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spawningDisabled: 0
+  numberSpawnedFalloff:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.99528307
+      inSlope: -0.59961635
+      outSlope: -0.59961635
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.49166667
+      value: 0.7004717
+      inSlope: -0.59961635
+      outSlope: -0.59961635
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  useNumberSpawnedFalloff: 0
+  enemyPrefab: {fileID: 4832132721555757471, guid: d04cc2881bd8ef348a251fe3b5db8103,
+    type: 3}
+  PowerLevel: 1
+  MaxCount: 1
+  numberSpawned: 0
+  isOutsideEnemy: 0
+  isDaytimeEnemy: 0
+  normalizedTimeInDayToLeave: 0
+  stunTimeMultiplier: 1
+  doorSpeedMultiplier: 1
+  stunGameDifficultyMultiplier: 0
+  canBeStunned: 1
+  canDie: 1
+  destroyOnDeath: 1
+  canSeeThroughFog: 0
+  timeToPlayAudio: 0
+  loudnessMultiplier: 0
+  overrideVentSFX: {fileID: 0}
+  hitBodySFX: {fileID: 0}
+  hitEnemyVoiceSFX: {fileID: 0}
+  deathSFX: {fileID: 0}
+  stunSFX: {fileID: 0}
+  miscAnimations: []
+  audioClips:
+  - {fileID: 8300000, guid: bbfa033b77d927f4e85133aeeadfff86, type: 3}
+  - {fileID: 8300000, guid: eef62f39dde8e3a4a810988cc2e43810, type: 3}
+  - {fileID: 8300000, guid: d7e1cca7d103176479deb9ae3d19982f, type: 3}
+  - {fileID: 8300000, guid: e5a529724c76e4448a0d14e59f536619, type: 3}
+  - {fileID: 8300000, guid: 705a2d91baccad4489f5e45a978a17a8, type: 3}
+  - {fileID: 8300000, guid: de96dfdc5f00f7b40a47fa2bed210718, type: 3}
+  - {fileID: 8300000, guid: 92c8da79c5da5f84ab0fef96d16fc55c, type: 3}
+  - {fileID: 8300000, guid: 13761b2e7c6e71a4cb89952ffd88c355, type: 3}
+  - {fileID: 8300000, guid: c2224b5332a936041967b5a95de0714a, type: 3}
+  - {fileID: 8300000, guid: 2f0f2e8f99c606d44a9587989b857fb0, type: 3}
+  - {fileID: 8300000, guid: 449f8e8f2b5b234499ba45c67c34c7ec, type: 3}
+  - {fileID: 8300000, guid: b8282d69a8ec81d4697c185363328174, type: 3}
+  - {fileID: 8300000, guid: b11052f70b9713c47bb93212cbda767d, type: 3}
+  - {fileID: 8300000, guid: 067bb18a702f86a44a445c6c2e031551, type: 3}
+  - {fileID: 8300000, guid: 0c284a207ee56654f8df7e53f2a662ba, type: 3}
+  - {fileID: 8300000, guid: 139b8a0249ef91a46b5ca7086a8b9127, type: 3}
+  - {fileID: 8300000, guid: 164b10c6d61e8e54fbd5005da24df204, type: 3}
+  - {fileID: 8300000, guid: 08201acb9a7e97a4aaf24fa6289911c1, type: 3}
+  - {fileID: 8300000, guid: 79fbc47b7b1d029479f207c9c425d45f, type: 3}
+  - {fileID: 8300000, guid: b86b88f336d38354e87d327011c4463d, type: 3}
+  - {fileID: 8300000, guid: eda7b68fa506d6e49a3cd9b8719badef, type: 3}
+  - {fileID: 8300000, guid: 2e47be5b0d2c4e74988082b3fe6536f0, type: 3}
+  - {fileID: 8300000, guid: 83fdc6bc0ae3e7a4e95b8f14dd496eeb, type: 3}
+  - {fileID: 8300000, guid: 2da8918700555964fb10060d7865b8c4, type: 3}

@@ -1,0 +1,19 @@
+v1.0.0:
+- Release of the first version
+- Added Yaroslav
+
+v1.1.0:
+- Added Yuri
+
+v1.2.0:
+- Added Valera
+
+v1.3.0:
+- Added portrait of Bratan
+- Added Bratan
+- Added portrait of Tsoi
+
+v1.4.0:
+- Added accordionman
+- Fixed position of Tsoi portrait
+- Improved Valera's AI
