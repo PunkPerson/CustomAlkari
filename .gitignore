@@ -7,9 +7,3 @@ ExampleEnemyAI.cs
 src/bin
 src/obj
 LethalCompanyUnityTemplate
-#LethalCompanyUnityTemplate/.git/
-#LethalCompanyUnityTemplate/.git*
-#LethalCompanyUnityTemplate/.vs*
-#LethalCompanyUnityTemplate/Assets/Plugins/*.dll
-#ethalCompanyUnityTemplate/Assets/Plugins/*.meta
-#LethalCompanyUnityTemplate/Assets/ModAssets*
