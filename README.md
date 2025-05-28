@@ -13,4 +13,4 @@ This mod requires:
 
 You can modify and public this mod, but you also will have to mention the authorship by providing a link to this repository or to the mod's page in ThunderStore.  
 
-Have funny game!
+Have the funniest game ever!

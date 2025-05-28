@@ -1,3 +1,4 @@
+using GameNetcodeStuff;
 using UnityEngine;
 
 namespace CustomAlkari
@@ -6,7 +7,8 @@ namespace CustomAlkari
     {
         enum State {
             LookingForPlayer,
-            WalkingToPlayer
+            WalkingToPlayer,
+            WalkingFromPlayer
         }
 
         private int currentState = 0;
@@ -14,7 +16,6 @@ namespace CustomAlkari
         private float timeSincePlayedSound = 300.0f;
 
         private const float SPEED = 5.0f;
-        private const float ROTSPEED = 5.0f;
 
         public override void Start()
         {
@@ -55,6 +56,23 @@ namespace CustomAlkari
                         currentState = (int) State.LookingForPlayer;
                     }
                     break;
+                
+                case (int) State.WalkingFromPlayer:
+                    if (targetPlayer) {
+                        if (timeSinceCollideWithPlayer < 5.0f) {
+                            SetDestinationToPosition(targetPlayer.transform.position);
+                            agent.speed = -SPEED;
+                            SyncPositionToClients();
+                        }
+                        else {
+                            timeSinceCollideWithPlayer = 0f;
+                            currentState = (int) State.WalkingToPlayer;
+                        }
+                    }
+                    else {
+                        currentState = (int) State.LookingForPlayer;
+                    }
+                    break;
             }
         }
 
@@ -65,9 +83,27 @@ namespace CustomAlkari
             timeSincePlayedSound += 0.2f;
         }
 
+        public override void HitEnemy(int force = 1, PlayerControllerB? playerWhoHit = null, bool playHitSFX = false, int hitID = -1)
+        {
+            base.HitEnemy(force, playerWhoHit, playHitSFX, hitID);
+
+            if(isEnemyDead){
+                return;
+            }
+
+            enemyHP -= force;
+            if (enemyHP <= 0 && !isEnemyDead) {
+                KillEnemy(true);
+                KillEnemyOnOwnerClient();
+            }
+        }
+
         public override void OnCollideWithPlayer(Collider other)
         {
-            if (timeSinceCollideWithPlayer < 5.0f) return;
+            if (timeSinceCollideWithPlayer < 5.0f) {
+                currentState = (int) State.WalkingFromPlayer;
+                return;
+            }
 
             if (timeSincePlayedSound > 5.0f * 60.0f) {
                 creatureVoice.PlayOneShot(enemyType.audioClips[0]);

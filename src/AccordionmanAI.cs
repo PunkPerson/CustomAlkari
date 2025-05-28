@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using GameNetcodeStuff;
 using UnityEngine;
@@ -38,6 +37,10 @@ namespace CustomAlkari
             base.Update();
 
             creatureAnimator.SetFloat("speed", agent.speed);
+
+            if (agent.speed < 0.5) {
+                creatureVoice.Stop();
+            }
 
             switch (currentState)
             {
@@ -85,8 +88,9 @@ namespace CustomAlkari
             if (timeSincePlayedSound < 7.0f) timeSincePlayedSound += 0.2f;
 
             if (timeSincePlayedSound >= 7.0f) {
-                if (currentState == (int) State.WalkingToPlayer)
+                if (currentState == (int) State.WalkingToPlayer && agent.speed > 0.5) {
                     creatureVoice.PlayOneShot(enemyType.audioClips[0]);
+                }
                 timeSincePlayedSound = 0f;
             }
         }
@@ -112,6 +116,7 @@ namespace CustomAlkari
 
             enemyHP -= force;
             if (enemyHP <= 0 && !isEnemyDead) {
+                KillEnemy(true);
                 KillEnemyOnOwnerClient();
             }
         }
