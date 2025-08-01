@@ -2,8 +2,8 @@
 
 # Custom Alkari
 
-![Static Badge](https://img.shields.io/badge/LICENSE-MIT-green?style=for-the-badge&link=https%3A%2F%2Fgithub.com%2FPunkPerson%2FCustomAlkari%2Fblob%2Fmaster%2FLICENSE)  
-![Static Badge](https://img.shields.io/badge/README.MD-на_АНГЛИЙСКОМ-blue?style=for-the-badge&link=https%3A%2F%2Fgithub.com%2FPunkPerson%2FCustomAlkari%2Fblob%2Fmaster%2FREADME.md)
+[![Static Badge](https://img.shields.io/badge/LICENSE-MIT-green?style=for-the-badge)](https://github.com/PunkPerson/CustomAlkari/blob/master/LICENSE)   
+[![Static Badge](https://img.shields.io/badge/README.MD-на_АНГЛИЙСКОМ-blue?style=for-the-badge)](https://github.com/PunkPerson/CustomAlkari/blob/master/README.md)
 
 Это мод для Lethal Company, который может вашу игру ВЕСЕЛЕЕ! 
 
