@@ -12,10 +12,8 @@
 Этот мод требует:  
 [BepInEx](https://thunderstore.io/package/bbepis/BepInExPack) | [Evaisa-LethalLib](https://thunderstore.io/c/lethal-company/p/Evaisa/LethalLib) | [Evaisa-HookGenPatcher](https://thunderstore.io/c/lethal-company/p/Evaisa/HookGenPatcher)
 
-You can modify and public this mod, but you also will have to mention the authorship by providing a link to this repository or to the mod's page in ThunderStore.  
-
-Веселой игры!
-
 #
+
+## Веселой игры!
 
 >Alkari — это производное от слова АЛКАШИ
