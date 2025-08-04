@@ -47,6 +47,11 @@ namespace CustomAlkari
                 case (int) State.LookingForPlayer:
                     agent.speed = 0;
 
+                    if (isAttackHead == true) {
+                        isAttackHead = false;
+                        StartCoroutine(IdleHead());
+                    }
+
                     if (!HasValidTarget())
                     {
                         TargetClosestPlayer();
@@ -55,6 +60,11 @@ namespace CustomAlkari
                     break;
                 
                 case (int) State.WalkingToPlayer:
+                    if (!HasValidTarget()) {
+                        currentState = (int) State.LookingForPlayer;
+                        return;
+                    }
+
                     if (timeSinceCollideWithPlayer < 2.0f) {
                         agent.speed = 0;
                         return;

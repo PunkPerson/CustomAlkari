@@ -10,17 +10,12 @@ namespace CustomAlkari
     [BepInDependency(LethalLib.Plugin.ModGUID)]
     public class Plugin : BaseUnityPlugin
     {
-        public const string ModGUID = "ru.tiopl09.customalkari";
+        public const string ModGUID = "ru.PunkPerson.customalkari";
         public const string ModName = "Custom Alkari";
         public const string ModVersion = "1.4.0";
 
         private string assetFile;
         private AssetBundle bundle;
-
-        public void Log(string text)
-        {
-            Logger.LogInfo(text);
-        }
 
         private void Awake()
         {

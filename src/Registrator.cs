@@ -18,7 +18,7 @@ namespace CustomAlkari
             NetworkPrefabs.RegisterNetworkPrefab(Yaroslav.spawnPrefab);
             Utilities.FixMixerGroups(Yaroslav.spawnPrefab);
 
-            Items.RegisterScrap(Yaroslav, 70, Levels.LevelTypes.DineLevel | Levels.LevelTypes.RendLevel | Levels.LevelTypes.TitanLevel | Levels.LevelTypes.ExperimentationLevel);
+            Items.RegisterScrap(Yaroslav, 30, Levels.LevelTypes.DineLevel | Levels.LevelTypes.RendLevel | Levels.LevelTypes.TitanLevel | Levels.LevelTypes.ExperimentationLevel);
         }
 
         private void ValeraInit()
@@ -28,7 +28,7 @@ namespace CustomAlkari
             TerminalKeyword ValeraKeyword = bundle.LoadAsset<TerminalKeyword>("Assets/Valera/ValeraKeyword.asset");
             NetworkPrefabs.RegisterNetworkPrefab(Valera.enemyPrefab);
 
-            Enemies.RegisterEnemy(Valera, 90, Levels.LevelTypes.All, ValeraTerminal, ValeraKeyword);
+            Enemies.RegisterEnemy(Valera, 30, Levels.LevelTypes.All, ValeraTerminal, ValeraKeyword);
         }
 
         private void YuriInit()
@@ -37,7 +37,7 @@ namespace CustomAlkari
             NetworkPrefabs.RegisterNetworkPrefab(Yuri.spawnPrefab);
             Utilities.FixMixerGroups(Yuri.spawnPrefab);
 
-            Items.RegisterScrap(Yuri, 80, Levels.LevelTypes.All);
+            Items.RegisterScrap(Yuri, 40, Levels.LevelTypes.All);
         }
 
         private void TsoiInit()
@@ -46,7 +46,7 @@ namespace CustomAlkari
             NetworkPrefabs.RegisterNetworkPrefab(Tsoi.spawnPrefab);
             Utilities.FixMixerGroups(Tsoi.spawnPrefab);
             
-            Items.RegisterScrap(Tsoi, 70, Levels.LevelTypes.All);
+            Items.RegisterScrap(Tsoi, 10, Levels.LevelTypes.All);
         }
 
         private void BratanInit()
@@ -55,7 +55,7 @@ namespace CustomAlkari
             NetworkPrefabs.RegisterNetworkPrefab(Bratan.spawnPrefab);
             Utilities.FixMixerGroups(Bratan.spawnPrefab);
 
-            Items.RegisterScrap(Bratan, 80, Levels.LevelTypes.All);
+            Items.RegisterScrap(Bratan, 40, Levels.LevelTypes.All);
         }
 
         private void BratanEnemyInit()
@@ -65,7 +65,7 @@ namespace CustomAlkari
             TerminalKeyword ValeraKeyword = bundle.LoadAsset<TerminalKeyword>("Assets/Valera/ValeraKeyword.asset");*/
             NetworkPrefabs.RegisterNetworkPrefab(Bratan.enemyPrefab);
 
-            Enemies.RegisterEnemy(Bratan, 70, Levels.LevelTypes.All, null, null);
+            Enemies.RegisterEnemy(Bratan, 30, Levels.LevelTypes.All, null, null);
         }
 
         private void AccordionmanInit()
@@ -74,6 +74,15 @@ namespace CustomAlkari
             NetworkPrefabs.RegisterNetworkPrefab(Accordionman.enemyPrefab);
 
             Enemies.RegisterEnemy(Accordionman, 40, Levels.LevelTypes.All, null, null);
+        }
+
+        private void GuitarInit()
+        {
+            Item Guitar = bundle.LoadAsset<Item>("Assets/Guitar/GuitarItem.asset");
+            NetworkPrefabs.RegisterNetworkPrefab(Guitar.spawnPrefab);
+            Utilities.FixMixerGroups(Guitar.spawnPrefab);
+
+            Items.RegisterScrap(Guitar, 0, Levels.LevelTypes.All);
         }
 
         public void RegisterEnemies()
@@ -89,6 +98,7 @@ namespace CustomAlkari
             YuriInit();
             BratanInit();
             TsoiInit();
+            GuitarInit();
         }
     }
 }

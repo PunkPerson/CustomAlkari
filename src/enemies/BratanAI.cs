@@ -4,8 +4,6 @@ namespace CustomAlkari
 {
     public class BratanAI : EnemyAI
     {
-        //Plugin plugin;
-
         enum State {
             Idle,
             LookingForPlayer,
@@ -27,6 +25,11 @@ namespace CustomAlkari
 
         private void WalkToPlayer()
         {
+            if (!HasValidTarget()) {
+                currentState = (int) State.LookingForPlayer;
+                return;
+            }
+
             var direction = (targetPlayer.playerGlobalHead.position - transform.position).normalized;
             var lookRotation = Quaternion.LookRotation(direction);
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed);
@@ -35,6 +38,11 @@ namespace CustomAlkari
 
         private void WalkFromPlayer()
         {
+            if (!HasValidTarget()) {
+                currentState = (int) State.LookingForPlayer;
+                return;
+            }
+
             var direction = -(targetPlayer.playerGlobalHead.position - transform.position).normalized;
             var lookRotation = Quaternion.LookRotation(direction);
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed);
@@ -44,9 +52,7 @@ namespace CustomAlkari
         public override void Start()
         {
             base.Start();
-            //plugin = new Plugin();
             currentState = (int) State.LookingForPlayer;
-            //plugin.Log("BratanEnemy");
         }
 
         public override void Update()
@@ -61,7 +67,6 @@ namespace CustomAlkari
                     else {
                         currentState = (int) State.WalkingFromPlayer;
                     }
-                    //plugin.Log("BratanEnemy");
                     break;
 
                 case (int) State.LookingForPlayer:
@@ -70,13 +75,11 @@ namespace CustomAlkari
                         targetPlayer = GetClosestPlayer();
                         currentState = (int) State.WalkingToPlayer;
                     }
-                    //plugin.Log("BratanEnemy");
                     break;
                 
                 case (int) State.WalkingToPlayer:
                     creatureAnimator.SetTrigger("startWalk");
                     WalkToPlayer();
-                    //plugin.Log("BratanEnemy");
                     break;
                 
                 case (int) State.WalkingFromPlayer:
@@ -86,7 +89,6 @@ namespace CustomAlkari
                     }
                     creatureAnimator.SetTrigger("startWalk");
                     WalkFromPlayer();
-                    //plugin.Log("BratanEnemy");
                     break;
             }
         }
@@ -99,8 +101,8 @@ namespace CustomAlkari
 
             if (timeSinceCollideWithPlayer < 10.0f) timeSinceCollideWithPlayer += 0.2f;
 
-            //DEBUG VALUE IS 6.6f , DEFAULT IS 390.0f
-            if (timeSincePlayedSound >= 390.0f) {
+            //DEBUG VALUE IS 6.6f , DEFAULT IS 300.0f
+            if (timeSincePlayedSound >= 300.0f) {
                 creatureVoice.PlayOneShot(enemyType.audioClips[UnityEngine.Random.Range(0, enemyType.audioClips.Length)]);
                 timeSincePlayedSound = 0f;
             }
@@ -108,7 +110,6 @@ namespace CustomAlkari
 
         public override void OnCollideWithPlayer(Collider other)
         {
-            //plugin.Log("BratanEnemy");
             timeSinceCollideWithPlayer = 0f;
             currentState = (int) State.Idle;
         }

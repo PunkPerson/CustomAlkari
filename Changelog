@@ -1,6 +1,6 @@
 v1.0.0:
-- Release of the first version
-- Added Yaroslav
+- The first version
+- Added portrait of Yaroslav
 
 v1.1.0:
 - Added Yuri
@@ -14,6 +14,13 @@ v1.3.0:
 - Added portrait of Tsoi
 
 v1.4.0:
-- Added accordionman
+- Changed mod GUID
+- Translated each of enemy's and item's name (Russian -> English)
+- Improved structure of project
+- Reduced chance of spawning custom items and enemies
+- Added Accordionman
+- Added guitar
 - Fixed position of Tsoi portrait
+- Fixed errors in each of AIs
 - Improved Valera's AI
+- Reduced Bratan's cooldown to play music

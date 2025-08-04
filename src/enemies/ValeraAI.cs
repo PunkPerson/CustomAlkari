@@ -45,6 +45,11 @@ namespace CustomAlkari
                     break;
                 
                 case (int) State.WalkingToPlayer:
+                    if (!HasValidTarget()) {
+                        currentState = (int) State.LookingForPlayer;
+                        return;
+                    }
+
                     if (timeSinceCollideWithPlayer < 1.0f) return;
 
                     if (targetPlayer) {
@@ -58,6 +63,11 @@ namespace CustomAlkari
                     break;
                 
                 case (int) State.WalkingFromPlayer:
+                    if (!HasValidTarget()) {
+                        currentState = (int) State.LookingForPlayer;
+                        return;
+                    }
+
                     if (targetPlayer) {
                         if (timeSinceCollideWithPlayer < 5.0f) {
                             SetDestinationToPosition(targetPlayer.transform.position);
