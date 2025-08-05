@@ -88,7 +88,7 @@ namespace CustomAlkari
         public void RegisterEnemies()
         {
             ValeraInit();
-            BratanEnemyInit();
+            //BratanEnemyInit();
             AccordionmanInit();
         }
 

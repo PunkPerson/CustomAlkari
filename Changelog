@@ -14,13 +14,16 @@ v1.3.0:
 - Added portrait of Tsoi
 
 v1.4.0:
+- Published on thunderstore.io
 - Changed mod GUID
-- Translated each of enemy's and item's name (Russian -> English)
+- Translated each of enemy's and item's name (Russian -> English) (partially)
 - Improved structure of project
 - Reduced chance of spawning custom items and enemies
 - Added Accordionman
 - Added guitar
 - Fixed position of Tsoi portrait
 - Fixed errors in each of AIs
+- Fixed items' positions in hand
 - Improved Valera's AI
 - Reduced Bratan's cooldown to play music
+- Temporary removed Bratan

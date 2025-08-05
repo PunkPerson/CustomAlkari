@@ -2,10 +2,14 @@
 
 # Custom Alkari
 
-[![Static Badge](https://img.shields.io/badge/LICENSE-MIT-green?style=for-the-badge)](https://github.com/PunkPerson/CustomAlkari/blob/master/LICENSE)  
-[![Static Badge](https://img.shields.io/badge/README.MD-in_RUSSIAN-blue?style=for-the-badge)](https://github.com/PunkPerson/CustomAlkari/blob/master/README_RU.md)
+<img src="icon.png" alt="icon" width="350px"/>
 
-This is a mod for Lethal Company that can make your playing MORE FUN!  
+<div style="margin-top: 10px;">
+<a href="https://github.com/PunkPerson/CustomAlkari/blob/master/LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-green?style=for-the-badge" alt="Static Badge"/></a>
+<a href="https://github.com/PunkPerson/CustomAlkari/blob/master/README_RU.md"><img src="https://img.shields.io/badge/README.MD-in_RUSSIAN-blue?style=for-the-badge" alt="Static Badge"/></a>
+</div>
+
+<h3 style="margin-top: 10px;">This is a mod for Lethal Company that can make your playing MORE FUN!</h3>
 
 ## Requirements
 
