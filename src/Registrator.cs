@@ -15,8 +15,8 @@ namespace CustomAlkari
         private void YaroslavInit()
         {
             Item Yaroslav = bundle.LoadAsset<Item>("Assets/Yaroslav/YaroslavItem.asset");
-            NetworkPrefabs.RegisterNetworkPrefab(Yaroslav.spawnPrefab);
             Utilities.FixMixerGroups(Yaroslav.spawnPrefab);
+            NetworkPrefabs.RegisterNetworkPrefab(Yaroslav.spawnPrefab);
 
             Items.RegisterScrap(Yaroslav, 25, Levels.LevelTypes.DineLevel | Levels.LevelTypes.RendLevel | Levels.LevelTypes.TitanLevel | Levels.LevelTypes.ExperimentationLevel);
         }
@@ -34,8 +34,8 @@ namespace CustomAlkari
         private void YuriInit()
         {
             Item Yuri = bundle.LoadAsset<Item>("Assets/Yuri/YuriItem.asset");
-            NetworkPrefabs.RegisterNetworkPrefab(Yuri.spawnPrefab);
             Utilities.FixMixerGroups(Yuri.spawnPrefab);
+            NetworkPrefabs.RegisterNetworkPrefab(Yuri.spawnPrefab);
 
             Items.RegisterScrap(Yuri, 30, Levels.LevelTypes.All);
         }
@@ -43,8 +43,8 @@ namespace CustomAlkari
         private void TsoiInit()
         {
             Item Tsoi = bundle.LoadAsset<Item>("Assets/Tsoi/TsoiItem.asset");
-            NetworkPrefabs.RegisterNetworkPrefab(Tsoi.spawnPrefab);
             Utilities.FixMixerGroups(Tsoi.spawnPrefab);
+            NetworkPrefabs.RegisterNetworkPrefab(Tsoi.spawnPrefab);
             
             Items.RegisterScrap(Tsoi, 10, Levels.LevelTypes.All);
         }
@@ -52,8 +52,8 @@ namespace CustomAlkari
         private void BratanInit()
         {
             Item Bratan = bundle.LoadAsset<Item>("Assets/Bratan/BratanItem.asset");
-            NetworkPrefabs.RegisterNetworkPrefab(Bratan.spawnPrefab);
             Utilities.FixMixerGroups(Bratan.spawnPrefab);
+            NetworkPrefabs.RegisterNetworkPrefab(Bratan.spawnPrefab);
 
             Items.RegisterScrap(Bratan, 30, Levels.LevelTypes.All);
         }
@@ -79,8 +79,8 @@ namespace CustomAlkari
         private void GuitarInit()
         {
             Item Guitar = bundle.LoadAsset<Item>("Assets/Guitar/GuitarItem.asset");
-            NetworkPrefabs.RegisterNetworkPrefab(Guitar.spawnPrefab);
             Utilities.FixMixerGroups(Guitar.spawnPrefab);
+            NetworkPrefabs.RegisterNetworkPrefab(Guitar.spawnPrefab);
 
             Items.RegisterScrap(Guitar, 20, Levels.LevelTypes.All);
         }
