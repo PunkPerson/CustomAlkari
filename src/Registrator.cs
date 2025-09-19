@@ -18,7 +18,7 @@ namespace CustomAlkari
             NetworkPrefabs.RegisterNetworkPrefab(Yaroslav.spawnPrefab);
             Utilities.FixMixerGroups(Yaroslav.spawnPrefab);
 
-            Items.RegisterScrap(Yaroslav, 30, Levels.LevelTypes.DineLevel | Levels.LevelTypes.RendLevel | Levels.LevelTypes.TitanLevel | Levels.LevelTypes.ExperimentationLevel);
+            Items.RegisterScrap(Yaroslav, 25, Levels.LevelTypes.DineLevel | Levels.LevelTypes.RendLevel | Levels.LevelTypes.TitanLevel | Levels.LevelTypes.ExperimentationLevel);
         }
 
         private void ValeraInit()
@@ -28,7 +28,7 @@ namespace CustomAlkari
             TerminalKeyword ValeraKeyword = bundle.LoadAsset<TerminalKeyword>("Assets/Valera/ValeraKeyword.asset");
             NetworkPrefabs.RegisterNetworkPrefab(Valera.enemyPrefab);
 
-            Enemies.RegisterEnemy(Valera, 30, Levels.LevelTypes.All, ValeraTerminal, ValeraKeyword);
+            Enemies.RegisterEnemy(Valera, 15, Levels.LevelTypes.All, ValeraTerminal, ValeraKeyword);
         }
 
         private void YuriInit()
@@ -37,7 +37,7 @@ namespace CustomAlkari
             NetworkPrefabs.RegisterNetworkPrefab(Yuri.spawnPrefab);
             Utilities.FixMixerGroups(Yuri.spawnPrefab);
 
-            Items.RegisterScrap(Yuri, 40, Levels.LevelTypes.All);
+            Items.RegisterScrap(Yuri, 30, Levels.LevelTypes.All);
         }
 
         private void TsoiInit()
@@ -55,7 +55,7 @@ namespace CustomAlkari
             NetworkPrefabs.RegisterNetworkPrefab(Bratan.spawnPrefab);
             Utilities.FixMixerGroups(Bratan.spawnPrefab);
 
-            Items.RegisterScrap(Bratan, 40, Levels.LevelTypes.All);
+            Items.RegisterScrap(Bratan, 30, Levels.LevelTypes.All);
         }
 
         private void BratanEnemyInit()
@@ -73,7 +73,7 @@ namespace CustomAlkari
             EnemyType Accordionman = bundle.LoadAsset<EnemyType>("Assets/Accordionman/AccordionmanEnemy.asset");
             NetworkPrefabs.RegisterNetworkPrefab(Accordionman.enemyPrefab);
 
-            Enemies.RegisterEnemy(Accordionman, 40, Levels.LevelTypes.All, null, null);
+            Enemies.RegisterEnemy(Accordionman, 10, Levels.LevelTypes.All, null, null);
         }
 
         private void GuitarInit()
@@ -82,7 +82,7 @@ namespace CustomAlkari
             NetworkPrefabs.RegisterNetworkPrefab(Guitar.spawnPrefab);
             Utilities.FixMixerGroups(Guitar.spawnPrefab);
 
-            Items.RegisterScrap(Guitar, 0, Levels.LevelTypes.All);
+            Items.RegisterScrap(Guitar, 20, Levels.LevelTypes.All);
         }
 
         public void RegisterEnemies()
