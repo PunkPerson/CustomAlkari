@@ -1,4 +1,4 @@
-# CustomAlkari
+# Custom Alkari
 
 /assets
 LC-ExampleEnemy
@@ -7,3 +7,5 @@ src/bin
 src/obj
 LethalCompanyUnityTemplate
 icon.psd
+BepInEx
+Custom Alkari.zip
