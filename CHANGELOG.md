@@ -1,18 +1,3 @@
-v1.0.0:
-- The first version
-- Added portrait of Yaroslav
-
-v1.1.0:
-- Added Yuri
-
-v1.2.0:
-- Added Valera
-
-v1.3.0:
-- Added portrait of Bratan
-- Added Bratan
-- Added portrait of Tsoi
-
 v1.4.0:
 - Published on thunderstore.io
 - Changed mod GUID
@@ -27,3 +12,18 @@ v1.4.0:
 - Improved Valera's AI
 - Reduced Bratan's cooldown to play music
 - Temporary removed Bratan
+
+v1.3.0:
+- Added portrait of Bratan
+- Added Bratan
+- Added portrait of Tsoi
+
+v1.2.0:
+- Added Valera
+
+v1.1.0:
+- Added Yuri
+
+v1.0.0:
+- The first version
+- Added portrait of Yaroslav
