@@ -1,0 +1,11 @@
+{
+    "name": "CustomAlkari",
+    "version_number": "1.4.0",
+    "website_url": "https://github.com/PunkPerson/CustomAlkari",
+    "description": "One of the funniest mods for Lethal Company. Adds a lot of monsters and items. HAVE FUN!",
+    "dependencies": [
+        "BepInEx-BepInExPack-5.4.2100",
+        "Evaisa-LethalLib-0.16.1",
+        "Evaisa-HookGenPatcher-0.0.5"
+    ]
+}
